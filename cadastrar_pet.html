@@ -10,46 +10,73 @@
     <title>Petshop</title>
 </head>
 <body>
-    <nav>
-        <a></a>
-        <ul class="topnav">
-            <li id="home"><a href="index.html">PetShop</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produtos.html">Produtos e Serviços</a></li>
-            <li id='direita'><a style="background-color:rgb(255, 255, 255); color:black;" href='login.html'>Login</a></li>
-        </ul>
-    </nav>
     <header>
-        
+        <nav>
+            <a></a>
+            <ul class="topnav">
+                <li id="home"><a href="index.html">PetShop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos e Serviços</a></li>
+                <li id='direita'><a style="background-color:rgb(255, 255, 255); color:black;" href='login.html'>Login</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="form_compra">
             <div class="container mt-5">
                 <div class="row">
-                    <form class="form-horizontal">
+                    <!--colocado o método get para conseguir testar caso os dados estão sendo transferidos
+                    corretamente com mais facilidade-->
+                    <form onsubmit="criadaSucesso()" class="form-horizontal" action="#" method="get">
                         <div class="form-group">
                             <br>
                             <label class="control-label col-sm-2" for="nome">Nome:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="nome" placeholder="Informe seu nome" name="nome" required />
                             </div>
+
+                            <br>
+                            <label class="control-label col-sm-2" for="sexo">Sexo:</label>
+                            <div class="col-sm-10">
+                                <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                                <label for="masculino">Masculino</label>
+                                <input type="radio" id="feminino" name="sexo" value="feminino" required>
+                                <label for="feminino">Feminino</label>
+                                <br>
+                                <br>
+                                <label for="datanasc">Data de nascimento:</label>
+                                <input type="date" id="datanasc" name="datanasc" required>
+                                <br>
+                                <br>
+                            </div>
+
                             <label class="control-label col-sm-2" for="raca">Raça:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="raca" placeholder="Informe a raça" name="raca" required />
                             </div>
+                            
                             <label class="control-label col-sm-2" for="tipo">Tipo:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="senha" placeholder="Informe o tipo" name="tipo" required />
                             </div>
+                            
+                            <!--não sei se faz muito sentido poder escolher varios temperamentos mas
+                            só pra utilizar os check boxes mesmo-->
+                            <br>
                             <label class="control-label col-sm-2" for="temepramento">Temperamento:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="temperamento" placeholder="55 51 98475-9845" name="temperamento" required />
+                                <input type="checkbox" id="calmo" name="temperamento1" value="calmo" >
+                                <label for="calmo"> Calmo </label><br>
+                                <input type="checkbox" id="normal" name="temperamento2" value="normal" >
+                                <label for="normal"> Normal </label><br>
+                                <input type="checkbox" id="endemoniado" name="temperamento3" value="endemoniado" >
+                                <label for="endemoniado"> Endemoniado </label><br>
                             </div>
+
                             <br>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button style="width:100%;" type="submit" class="btn btn-primary">Cadastrar</button>
-                                    
                                 </div>
                             </div>
                         </div>

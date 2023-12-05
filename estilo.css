@@ -6,9 +6,9 @@ header{
 	color:white;
 	font-family:verdana;
 	text-align:center;
-	padding-top:53px;
 	padding-bottom:10px;
 	margin:0;
+    margin-bottom: 53px;
 }
 /*tirar margens mudar a fonte e a cor de fundo*/
 body{
@@ -117,10 +117,14 @@ footer p{
 	margin-left:20%;
 	padding-left:6%;
 	width:60%;
-    background-image:radial-gradient(rgb(144, 251, 255), rgb(255, 255, 255), rgba(214, 214, 214, 0.3));
+    background-image:radial-gradient(rgb(144, 255, 255), rgba(248, 248, 248), rgba(248, 248, 248));
 }
-#form_compra a:hover{
-	color:red;
+#form_compra a{
+    cursor: pointer;
+    transition: 250ms;
+}
+.ir_criar:hover{
+    color:red;
 }
 /*menu lateral com filtros e pesquisa*/
 .menu_lateral{

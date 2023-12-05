@@ -10,23 +10,24 @@
     <title>Petshop</title>
 </head>
 <body>
-    <nav>
-        <a></a>
-        <ul class="topnav">
-            <li id="home"><a href="index.html">PetShop</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produtos.html">Produtos e Serviços</a></li>
-            <li id='direita'><a style="background-color:rgb(255, 255, 255); color:black;" href='login.html'>Login</a></li>
-        </ul>
-    </nav>
     <header>
-        
+        <nav>
+            <a></a>
+            <ul class="topnav">
+                <li id="home"><a href="index.html">PetShop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos e Serviços</a></li>
+                <li id='direita'><a style="background-color:rgb(255, 255, 255); color:black;" href='login.html'>Login</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="form_compra">
             <div class="container mt-5">
                 <div class="row">
-                    <form class="form-horizontal">
+                    <!--colocado o método get para conseguir testar caso os dados estão sendo transferidos
+                    corretamente com mais facilidade-->
+                    <form onsubmit="loginSucesso()" class="form-horizontal" action="#" method="get">
                         <div class="form-group">
                             <br>
                             <label class="control-label col-sm-2" for="E-mail">E-mail:</label>
@@ -41,7 +42,6 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button style="width:100%;" type="submit" class="btn btn-primary">Login</button>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -49,9 +49,9 @@
                 </div>
             </div>
             <br>
-            <a id="ir_criar" href="criar_conta.html"><label>Não possui uma conta? Clique aqui</label></a>
+            <a class="ir_criar" href="criar_conta.html"><label>Não possui uma conta? Clique aqui</label></a>
             <br>
-            <a id="ir_criar" href="cadastrar_pet.html"><label>Quero cadastrar o meu pet</label></a>
+            <a class="ir_criar" href="cadastrar_pet.html"><label>Quero cadastrar o meu pet</label></a>
         </section>
     </main>
     <footer>

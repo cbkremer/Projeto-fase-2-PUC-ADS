@@ -10,46 +10,66 @@
     <title>Petshop</title>
 </head>
 <body>
-    <nav>
-        <a></a>
-        <ul class="topnav">
-            <li id="home"><a href="index.html">PetShop</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="produtos.html">Produtos e Serviços</a></li>
-            <li id='direita'><a style="background-color:rgb(255, 255, 255); color:black;" href='login.html'>Login</a></li>
-        </ul>
-    </nav>
     <header>
-        
+        <nav>
+            <a></a>
+            <ul class="topnav">
+                <li id="home"><a href="index.html">PetShop</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos e Serviços</a></li>
+                <li id='direita'><a style="background-color:rgb(255, 255, 255); color:black;" href='login.html'>Login</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="form_compra">
             <div class="container mt-5">
                 <div class="row">
-                    <form class="form-horizontal">
-                        <div class="form-group">
+                    <form onsubmit="criadaSucesso()" class="form-horizontal">
+                        <!--colocado o método get para conseguir testar caso os dados estão sendo transferidos
+                        corretamente com mais facilidade-->
+                        <form class="form-horizontal" action="#" method="get">
                             <br>
                             <label class="control-label col-sm-2" for="nome">Nome Completo:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="nome" placeholder="Informe seu nome" name="nome" required />
                             </div>
+
+                            
+                            <br>
+                            <label class="control-label col-sm-2" for="sexo">Sexo:</label>
+                            <div class="col-sm-10">
+                                <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                                <label for="masculino">Masculino</label>
+                                <input type="radio" id="feminino" name="sexo" value="feminino" required>
+                                <label for="feminino">Feminino</label>
+                                <br>
+                                <br>
+                                <label for="datanasc">Data de nascimento:</label>
+                                <input type="date" id="datanasc" name="datanasc" required>
+                                <br>
+                                <br>
+                            </div>
+
                             <label class="control-label col-sm-2" for="E-mail">E-mail:</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control" id="E-mail" placeholder="Informe email" name="login" required />
                             </div>
+                            
                             <label class="control-label col-sm-2" for="senha">Senha:</label>
                             <div class="col-sm-10">
                                 <input type="password" class="form-control" id="senha" placeholder="*********" name="senha" required />
                             </div>
-                            <label class="control-label col-sm-2" for="telefone">Telefone:</label>
+                            
+                            <label class="control-label col-sm-2" for="celular">Celular:</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="telefone" placeholder="55 51 98475-9845" name="telefone" required />
+                                <input oninput="mascaraCelular(this)" type="text" class="form-control" id="celular" placeholder="55 51 98475-9845" name="celular" maxlength="18" required />
                             </div>
+
                             <br>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button style="width:100%;" type="submit" class="btn btn-primary">Cadastrar</button>
-                                    
                                 </div>
                             </div>
                         </div>
